@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio2
 {
-    class Armas : Invobjetos
+    class Armas : Tienda
     {
         public float damage;
         public float speedAtackked;

@@ -8,11 +8,27 @@ namespace Ejercicio2
 {
     abstract class Tienda
     {
-        public abstract float precio { get; set; }
-        public abstract string name { get; set; }
+        protected string nombre;
+        protected int precio;
+        protected Tienda(string nombre, int precio)
+        {
+            this.nombre = nombre;
+            this.precio = precio;
+        }
+        public string ObtenernmbrObjeto()
+        {
+            return nombre;
+        }
+
+
+        public abstract float precioa { get; set; }
+        public abstract string nombrea { get; set; }
 
         public abstract float PrecioTotal();
 
 
     }
+
+   
+  
 }

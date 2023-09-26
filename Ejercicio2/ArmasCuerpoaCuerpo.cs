@@ -8,12 +8,12 @@ namespace Ejercicio2
 {
      class ArmasCuerpoaCuerpo : Armas,IData 
      {
-        public ArmasCuerpoaCuerpo(string nombre, float damage, float speedattack, int precio) : base("Arma", damage, speedattack, precio)
+        public ArmasCuerpoaCuerpo(string nombrea, float damage, float speedattack, int precioa) : base("Arma", damage, speedattack, precioa)
         {
-            this.nombre = nombre;
+            this.nombrea = nombrea;
             this.damage = damage;
             this.speedAtackked = speedattack;
-            this.precio = precio;
+            this.precioa = precioa;
         }
 
         public float DamageForSecond()
@@ -28,7 +28,7 @@ namespace Ejercicio2
 
         public string Data()
         {
-            return $"{nombre} - daño: {damage} - velocidad de ataque: {speedAtackked} - precio: {PrecioTotal()}";
+            return $"{nombrea} - daño: {damage} - velocidad de ataque: {speedAtackked} - precio: {PrecioTotal()}";
         }
     }
 }

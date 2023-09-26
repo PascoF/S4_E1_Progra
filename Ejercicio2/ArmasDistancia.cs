@@ -11,10 +11,10 @@ namespace Ejercicio2
         public Proyectiles proyectiles;
         public ArmasDistancia(string name, float damage, float speedattack, int precio,Proyectiles proyectiles) : base("Arco", damage, speedattack, precio)
         {
-            this.nombre = name;
+            this.nombrea = name;
             this.damage = damage;
             this.speedAtackked = speedattack;
-            this.precio = precio;
+            this.precioa = precio;
             this.proyectiles= proyectiles;
         }
 
@@ -33,7 +33,7 @@ namespace Ejercicio2
 
         public string Data()
         {
-            return $"{nombre} - daño : {damage} - velocidad de ataque: {speedAtackked} - precio: {precio} / proyectil : {proyectiles.name} - dañoProyectil : {proyectiles.damage} - precioProyectil : {proyectiles.precio}";
+            return $"{nombrea} - daño : {damage} - velocidad de ataque: {speedAtackked} - precio: {precioa} / proyectil : {proyectiles.name} - dañoProyectil : {proyectiles.damage} - precioProyectil : {proyectiles.precio}";
         }
     }
 }

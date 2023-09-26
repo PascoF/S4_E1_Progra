@@ -18,7 +18,7 @@ namespace Ejercicio2
             Proyectiles bala = new Proyectiles("Bala", 3, 5);
             ArmasDistancia arco = new ArmasDistancia("Arco", 1.5f, 1, 100, flechas);
             ArmasDistancia pistola = new ArmasDistancia("Pistola", 1.5f, 3, 150, bala);
-            List<Invobjetos> invobjetos = new List<Invobjetos>();
+            List<Tienda> tienda = new List<Tienda>();
 
             while (true)
             {
@@ -48,38 +48,38 @@ namespace Ejercicio2
                     {
                         case "1":
                             Console.WriteLine(espada.Data());
-                            invobjetos.Add(espada);
+                            tienda.Add(espada);
                             Console.WriteLine("Se añadio a tu inventario");
-                            InventarioObjetos(invobjetos);
+                            InventarioObjetos(tienda);
                             break;
 
                         case "2":
                             Console.WriteLine(arco.Data());
-                            invobjetos.Add(arco);
+                            tienda.Add(arco);
                             Console.WriteLine("Se añadio a tu inventario");
-                            InventarioObjetos(invobjetos);
+                            InventarioObjetos(tienda);
                             break;
 
                         case "3":
                             Console.WriteLine(pistola.Data());
-                            invobjetos.Add(pistola);
+                            tienda.Add(pistola);
                             Console.WriteLine("Se añadio a tu inventario");
-                            InventarioObjetos(invobjetos);
+                            InventarioObjetos(tienda);
                             break;
 
                         case "4":
-                            Console.WriteLine(armaduraCuero.GetData());
-                            invobjetos.Add(armaduraCuero);
+                            Console.WriteLine(armaduraCuero.Data());
+                            tienda.Add(armaduraCuero);
                             Console.WriteLine("Se añadio a tu inventario");
-                            InventarioObjetos(invobjetos);
+                            InventarioObjetos(tienda);
                          break;
 
 
                         case "5":
-                            Console.WriteLine(armaduraMetal.GetData());
-                            invobjetos.Add(armaduraMetal);
+                            Console.WriteLine(armaduraMetal.Data());
+                            tienda.Add(armaduraMetal);
                             Console.WriteLine("Se añadio a tu inventario");
-                            InventarioObjetos(invobjetos);
+                            InventarioObjetos(tienda);
                             break;
 
                         default:
@@ -96,7 +96,7 @@ namespace Ejercicio2
             }
         }
 
-        static void InventarioObjetos(List<Invobjetos> invobjetos)
+        static void InventarioObjetos(List<Tienda> tienda)
         {
             while (true)
             {
@@ -116,30 +116,30 @@ namespace Ejercicio2
 
                     case "2":
                         //ver objetos de inventario listadas
-                        for (int i = 0; i < invobjetos.Count; i++)
+                        for (int i = 0; i < tienda.Count; i++)
                         {
 
-                            Console.WriteLine($"{i + 1}. {invobjetos[i].ObtenernmbrObjeto()}");
+                            Console.WriteLine($"{i + 1}. {tienda[i].ObtenernmbrObjeto()}");
 
                         }
                         break;
 
                     case "3":
                         //eliminar objetos del inventario
-                        if (invobjetos.Count > 0)
+                        if (tienda.Count > 0)
                         {
                             Console.WriteLine("¿Que objeto va a eliminar?");
 
-                            for (int i = 0; i < invobjetos.Count; i++)
+                            for (int i = 0; i < tienda.Count; i++)
                             {
 
-                                Console.WriteLine($"{i + 1}. {invobjetos[i].ObtenernmbrObjeto()}");
+                                Console.WriteLine($"{i + 1}. {tienda[i].ObtenernmbrObjeto()}");
 
                             }
                             if (int.TryParse(Console.ReadLine(), out int choice))
                             {
 
-                                invobjetos.RemoveAt(choice - 1);
+                                tienda.RemoveAt(choice - 1);
 
                             }
 
