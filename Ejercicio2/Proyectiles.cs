@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Ejercicio2
 {
-    class Proyectiles : Armas
+    class Proyectiles
     {
+        public string name;
+        public float damage;
+        public int precio;
 
-
-        public Proyectiles(string name, float damage, float precio)
+        public Proyectiles(string name, float damage, int precio)
         {
             this.name = name;
             this.damage = damage;
@@ -19,6 +21,11 @@ namespace Ejercicio2
         public float Damage()
         {
             return damage;
+        }
+
+        public float Precio()
+        {
+            return precio;
         }
     }
 }

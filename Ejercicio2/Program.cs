@@ -8,13 +8,16 @@ namespace Ejercicio2
 {
     class Program
     {
-        List<ArmaduraCuero> invobjetos = new List<ArmaduraCuero>();
-
         static void Main(string[] args)
         {
             //lista de armaduras, armas, proyectiles
             ArmaduraCuero armaduraCuero = new ArmaduraCuero("Armadura hecha de cuero", 15, 98, 179);
             ArmaduraMetal armaduraMetal = new ArmaduraMetal("Armadura hecha de metal", 50, 100, 299);
+            ArmasCuerpoaCuerpo espada = new ArmasCuerpoaCuerpo("Espada", 7, 2.5f, 50);
+            Proyectiles flechas = new Proyectiles("Flecha", 2, 5);
+            Proyectiles bala = new Proyectiles("Bala", 3, 5);
+            ArmasDistancia arco = new ArmasDistancia("Arco", 1.5f, 1, 100, flechas);
+            ArmasDistancia pistola = new ArmasDistancia("Pistola", 1.5f, 3, 150, bala);
             List<Invobjetos> invobjetos = new List<Invobjetos>();
 
             while (true)
@@ -32,12 +35,11 @@ namespace Ejercicio2
                 {
 
                     Console.WriteLine("¿Que va a comprar?");
-
-                    Console.WriteLine("1. Armadura cuero");
-                    Console.WriteLine("2. Armadura metal");
-                    //Console.WriteLine("3. Armas");
-
-                    //aqui arriba ponen la lista de tipos de armas, si quieren pueden expandirlo más la interfaz.
+                    Console.WriteLine("1. Espada");
+                    Console.WriteLine("2. Arco");
+                    Console.WriteLine("3. Pistola");
+                    Console.WriteLine("4. Armadura cuero");
+                    Console.WriteLine("5. Armadura metal");
 
                     string elec;
                     elec = Console.ReadLine();
@@ -45,28 +47,40 @@ namespace Ejercicio2
                     switch (elec)
                     {
                         case "1":
-                            Console.WriteLine(armaduraCuero.GetData());
-                            invobjetos.Add(armaduraCuero);
+                            Console.WriteLine(espada.Data());
+                            invobjetos.Add(espada);
                             Console.WriteLine("Se añadio a tu inventario");
                             InventarioObjetos(invobjetos);
                             break;
 
                         case "2":
+                            Console.WriteLine(arco.Data());
+                            invobjetos.Add(arco);
+                            Console.WriteLine("Se añadio a tu inventario");
+                            InventarioObjetos(invobjetos);
+                            break;
+
+                        case "3":
+                            Console.WriteLine(pistola.Data());
+                            invobjetos.Add(pistola);
+                            Console.WriteLine("Se añadio a tu inventario");
+                            InventarioObjetos(invobjetos);
+                            break;
+
+                        case "4":
+                            Console.WriteLine(armaduraCuero.GetData());
+                            invobjetos.Add(armaduraCuero);
+                            Console.WriteLine("Se añadio a tu inventario");
+                            InventarioObjetos(invobjetos);
+                         break;
+
+
+                        case "5":
                             Console.WriteLine(armaduraMetal.GetData());
                             invobjetos.Add(armaduraMetal);
                             Console.WriteLine("Se añadio a tu inventario");
                             InventarioObjetos(invobjetos);
                             break;
-
-                        //case "3":
-                        //    Console.WriteLine(pistol.GetData());
-                        //    invobjetos.Add(pistol);
-                        //    Console.WriteLine("Se añadio a tu inventario");
-                        //    InventarioObjetos(invobjetos);
-                        // break;
-
-                        //agregan mas armas
-
 
                         default:
                             Console.WriteLine("¿Podria repetir?");
