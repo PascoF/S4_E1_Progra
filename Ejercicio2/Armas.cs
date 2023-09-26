@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TareaTanaka
+namespace Ejercicio2
 {
     abstract class Armas : Tienda
     {
-        public override string name { get; set; }
+        public override string nombrea { get; set; }
         public float damage;
         public float speedAtackked;
-        public override float precio { get ; set ; }
+        public override float precioa { get ; set ; }
 
         public override float PrecioTotal()
         {
