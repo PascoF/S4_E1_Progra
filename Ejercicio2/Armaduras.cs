@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio2
 {
-    class Armaduras : Tienda
+    class Armaduras : Invobjetos
     {
         protected float reducciondano;
         protected float durabilidad;

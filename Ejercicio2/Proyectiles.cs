@@ -10,11 +10,11 @@ namespace Ejercicio2
     {
 
 
-        public Proyectiles(string nombrea, float damage, float precioa)
+        public Proyectiles(string name, float damage, float precio)
         {
-            this.nombrea = nombrea;
+            this.name = name;
             this.damage = damage;
-            this.precioa = precioa;
+            this.precio = precio;
         }
         public float Damage()
         {

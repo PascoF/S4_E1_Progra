@@ -4,17 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejercicio2
+namespace TareaTanaka
 {
     class ArmasDistancia : Armas,IDamageSescond,IData
     {
         public Proyectiles proyectiles;
-        public ArmasDistancia(string nombrea, float damage, float speedAtackked, float precioa,Proyectiles proyectiles)
+        public ArmasDistancia(string name, float damage, float speedAtackked, float precio,Proyectiles proyectiles)
         {
-            this.nombrea = nombrea;
+            this.name = name;
             this.damage = damage;
             this.speedAtackked = speedAtackked;
-            this.precioa = precioa;
+            this.precio = precio;
             this.proyectiles= proyectiles;
         }
 
@@ -28,12 +28,12 @@ namespace Ejercicio2
         }
         public override float PrecioTotal()
         {
-            return precio+proyectiles.precioa;
+            return precio+proyectiles.precio;
         }
 
         public string Data()
         {
-            return $"{nombrea} - daño : {damage} - velocidad de ataque: {speedAtackked} - precio: {precio} / proyectil : {proyectiles.nombrea} - dañoProyectil : {proyectiles.damage} - precioProyectil : {proyectiles.precio}";
+            return $"{name} - daño : {damage} - velocidad de ataque: {speedAtackked} - precio: {precio} / proyectil : {proyectiles.name} - dañoProyectil : {proyectiles.damage} - precioProyectil : {proyectiles.precio}";
         }
     }
 }

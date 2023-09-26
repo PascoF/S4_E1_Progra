@@ -16,7 +16,7 @@ namespace Ejercicio2
         {
             return reducciondano;
         }
-        public string Data()
+        public string GetData()
         {
             return $"{nombre} / La reduccion de daño de la armadura es... {reducciondano} / su durabilidad es {durabilidad} / Con todo esto, el precio de la armadura es... {precio}";
         }
