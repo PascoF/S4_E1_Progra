@@ -4,21 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TareaTanaka
+namespace Ejercicio2
 {
-    abstract class Armas : Tienda
+    class Armas : Invobjetos
     {
-        public override string name { get; set; }
         public float damage;
         public float speedAtackked;
-        public override float precio { get ; set ; }
 
-        public override float PrecioTotal()
+        protected Armas(string nombre, float damage, float speedattack, int precio) : base("Arma", precio)
         {
-            return 0;
+            this.damage = damage;
+            this.speedAtackked = speedattack;
         }
-            
-        
+
+
 
     }
 }

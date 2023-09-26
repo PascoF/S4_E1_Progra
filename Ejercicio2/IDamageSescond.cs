@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TareaTanaka
+namespace Ejercicio2
 {
     interface IDamageSescond
     {
